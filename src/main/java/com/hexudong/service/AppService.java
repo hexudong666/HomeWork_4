@@ -14,9 +14,9 @@ public interface AppService {
 
 	List<Applicant> zc();
 
-	void pjf(Applicant a);
+	List<Applicant> pjf(Applicant a);
 
-	void yjs(Applicant a);
+	List<Applicant> yjs(Applicant a);
 	
 
 }

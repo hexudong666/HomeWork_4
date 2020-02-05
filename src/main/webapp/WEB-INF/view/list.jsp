@@ -57,8 +57,8 @@
   			<c:if test="${f.degree==2}">硕士</c:if>
   			<c:if test="${f.degree==3}">博士</c:if>
   		</td>
-  		<td>${f.cj}</td>
-  		<td>${f.pjf}</td>
+  		<td>${f.scoreDesc}</td>
+  		<td>${f.argScore}</td>
   		<td>
   			<input type="button" value="删除" onclick="del(${f.id})">
   		</td>

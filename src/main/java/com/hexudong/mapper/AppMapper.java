@@ -14,8 +14,8 @@ public interface AppMapper {
 
 	List<Applicant> zc();
 
-	void getPjf(Applicant a);
+	List<Applicant> getPjf(Applicant a);
 
-	void getYjs(Applicant a);
+	List<Applicant> getYjs(Applicant a);
 
 }

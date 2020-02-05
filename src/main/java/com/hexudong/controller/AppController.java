@@ -59,15 +59,15 @@ public class AppController {
 	
 	@RequestMapping("pjf")
 	private String getPjf(Applicant a,Model model) {
-		service.pjf(a);
-		model.addAttribute("a", a);
+		List<Applicant> list = service.pjf(a);
+		model.addAttribute("a", list);
 		return "pjf";
 	}
 	
 	@RequestMapping("yjs")
 	private String getYjs(Applicant a,Model model) {
-		service.yjs(a);
-		model.addAttribute("a", a);
+		List<Applicant> list = service.yjs(a);
+		model.addAttribute("a", list);
 		return "yjs";
 	}
 	

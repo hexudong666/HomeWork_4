@@ -40,12 +40,13 @@ public class AppServiceImpl implements AppService {
 	}
 	
 	@Override
-	public void pjf(Applicant a) {
-		mapper.getPjf(a);
+	public List<Applicant> pjf(Applicant a) {
+		return mapper.getPjf(a);
 	}
 	
 	@Override
-	public void yjs(Applicant a) {
-		mapper.getYjs(a);
+	public List<Applicant> yjs(Applicant a) {
+		
+		return mapper.getYjs(a);
 	}
 }

@@ -13,12 +13,26 @@
 <title>Insert title here</title>
 <!--日期插件--><script type="text/javascript" src="/resource/My97DatePicker/WdatePicker.js"></script>
 <!--bootstrap的css,js -->
-<link rel="stylesheet" href="/resource/css/index3.css"/>
 <link rel="stylesheet" href="/resource/bootstrap-4.3.1/css/bootstrap.css"/> 
-<script type="text/javascript" src="/resource/js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="/resource/bootstrap-4.3.1/js/bootstrap.js"></script> 
 </head>
 <body>
-	平均分到80的是${a.name}
+	<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">人员名字</th>
+      <th scope="col">平均成绩</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<c:forEach items="${a}" var="f">
+  	<tr>
+      <td>${f.name}</td>
+      <td>${f.argScore}</td>
+    </tr>
+  	</c:forEach>
+  </tbody>
+</table>
+<a href="list">首页</a>
 </body>
 </html>

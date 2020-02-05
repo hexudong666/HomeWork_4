@@ -1,41 +1,55 @@
 package com.hexudong.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
 
-public class Applicant implements Serializable {
+public class Applicant{
 
-	
-	
-	
-	    /**
-	    * @Fields serialVersionUID : 生成序列化id
-	    */
-	private static final long serialVersionUID = -6111181578804933476L;
-	
-	
-	/**  **/
+	/** 主键 **/
 	private Integer id;
-	/**  **/
+	/** 应聘人 **/
 	private String name;
-	/**  **/
+	/** 性别:1男；2女 **/
 	private String gender;
-	/**  **/
+	/** 出生日期 **/
 	private Date birthday;
-	/**  **/
+	/** 毕业大学 **/
 	private String college;
-	/**  **/
+	/** 所学专业 **/
 	private String major;
-	/**  **/
+	/** 学历:1-专科，2-本科，3-研究生 **/
 	private Integer edu;
-	/**  **/
+	/** 学位:1-学士，2-硕士，3-博士 **/
 	private Integer degree;
-	/**  **/
+	/** 创建日期 **/
 	private Date created;
-
-	private Integer cj;//成绩
-	private Integer pjf;//平均分
+	/** 各门课程的成绩 **/
+	private String scoreDesc;
+	/** 平均分 **/
+	private Integer argScore;
+	/** 主持分 **/
+	private Integer zcScore;
+	
+	
+	
+	public String getScoreDesc() {
+		return scoreDesc;
+	}
+	public void setScoreDesc(String scoreDesc) {
+		this.scoreDesc = scoreDesc;
+	}
+	public Integer getArgScore() {
+		return argScore;
+	}
+	public void setArgScore(Integer argScore) {
+		this.argScore = argScore;
+	}
+	public Integer getZcScore() {
+		return zcScore;
+	}
+	public void setZcScore(Integer zcScore) {
+		this.zcScore = zcScore;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -90,47 +104,14 @@ public class Applicant implements Serializable {
 	public void setCreated(Date created) {
 		this.created = created;
 	}
-	public Integer getCj() {
-		return cj;
-	}
-	public void setCj(Integer cj) {
-		this.cj = cj;
-	}
-	public Integer getPjf() {
-		return pjf;
-	}
-	public void setPjf(Integer pjf) {
-		this.pjf = pjf;
-	}
 	@Override
 	public String toString() {
 		return "Applicant [id=" + id + ", name=" + name + ", gender=" + gender + ", birthday=" + birthday + ", college="
 				+ college + ", major=" + major + ", edu=" + edu + ", degree=" + degree + ", created=" + created
-				+ ", cj=" + cj + ", pjf=" + pjf + "]";
+				+ ", scoreDesc=" + scoreDesc + ", argScore=" + argScore + ", zcScore=" + zcScore + "]";
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Applicant other = (Applicant) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		return true;
-	}
+	
+	
 	
 	
 }
